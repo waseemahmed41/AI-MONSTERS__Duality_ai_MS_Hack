@@ -118,9 +118,14 @@ During training, monitor:
 * Continuous updates via **Falcon digital twin retraining pipeline**
 
 
-## 🙌 Contributors
+## 🙌 Contributors 
 
-* **MD Waseem Ahmed** (Machine Learning Engineer)
+* **MD Waseem Ahmed**
+* **Vantala Saisree**
+* **MD Rukhnuddin**
+* **MD Faizan**
+* **Mujihad Ahmed**
+* **T Sai Nikhil**
 
 
 🔥 With this solution, we show how **synthetic data + YOLOv8** can be harnessed for **critical safety applications in space missions**.
