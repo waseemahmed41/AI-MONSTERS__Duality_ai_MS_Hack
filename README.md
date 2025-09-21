@@ -146,13 +146,6 @@ cd dualityai-safety-detection</code></pre>
 
   <hr>
 
-  <h2>🏆 Judging Criteria Alignment</h2>
-  <ul>
-    <li>🎯 Model Performance (mAP@0.5): 80 pts</li>
-    <li>📖 Report clarity & reproducibility: 20 pts</li>
-    <li>🎁 Bonus (App + Falcon Use-case): Extra credit</li>
-  </ul>
-
   <hr>
 
   <h2>📌 Future Improvements</h2>
