@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Duality AI – Space Station Safety Object Detection Challenge</title>
-</head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6;">
-
   <h1>🚀 Duality AI – Space Station Safety Object Detection Challenge</h1>
   <p><strong>Live Demo:</strong> 🔗 
     <a href="https://dualityai-spacestationdetection.streamlit.app/" target="_blank">
