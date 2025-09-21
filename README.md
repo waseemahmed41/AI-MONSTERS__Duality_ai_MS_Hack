@@ -1,38 +1,60 @@
-🚀 Duality AI – Space Station Safety Object Detection Challenge
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Duality AI – Space Station Safety Object Detection Challenge</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6;">
 
-Live Demo: 🔗 Streamlit App
+  <h1>🚀 Duality AI – Space Station Safety Object Detection Challenge</h1>
+  <p><strong>Live Demo:</strong> 🔗 
+    <a href="https://dualityai-spacestationdetection.streamlit.app/" target="_blank">
+      Streamlit App
+    </a>
+  </p>
 
-📌 Overview
+  <hr>
 
-This repository contains our solution for the “Safety Object Detection #2” Hackathon, organized by Duality AI.
+  <h2>📌 Overview</h2>
+  <p>
+    This repository contains our solution for the <strong>“Safety Object Detection #2” Hackathon</strong>, 
+    organized by <strong>Duality AI</strong>.
+  </p>
+  <p>
+    The challenge required building a <strong>robust object detection system</strong> to identify 
+    <strong>seven critical safety objects</strong> inside a <strong>simulated space station</strong>.
+  </p>
+  <p>
+    The dataset was generated using <strong>Duality AI’s Falcon digital twin platform</strong>, 
+    providing highly realistic synthetic images with variations in 
+    <em>lighting, occlusion, and camera perspectives</em>.
+  </p>
+  <p>
+    Our solution leverages <strong>YOLOv8</strong> for detection and an 
+    <strong>interactive Streamlit app</strong> for real-time inference, 
+    deployed on <strong>Streamlit Cloud</strong>.
+  </p>
 
-The challenge was to build a robust object detection model capable of identifying seven critical safety objects inside a simulated space station.
+  <hr>
 
-The dataset was generated using Duality AI’s Falcon digital twin platform, providing diverse synthetic images with realistic variations in lighting, occlusion, and camera perspectives.
+  <h2>🎯 Problem Statement</h2>
+  <p>The model detects the following safety-critical objects:</p>
+  <ul>
+    <li>🟦 OxygenTank</li>
+    <li>🟦 NitrogenTank</li>
+    <li>🟩 FirstAidBox</li>
+    <li>🔴 FireAlarm</li>
+    <li>⚡ SafetySwitchPanel</li>
+    <li>☎️ EmergencyPhone</li>
+    <li>🔥 FireExtinguisher</li>
+  </ul>
 
-Our solution uses YOLOv8 for object detection and includes a Streamlit web app for real-time inference, deployed on Streamlit Cloud.
+  <hr>
 
-🎯 Problem Statement
+  <h2>🛠️ Technical Workflow</h2>
 
-Detect the following safety-critical objects:
-
-🟦 OxygenTank
-
-🟦 NitrogenTank
-
-🟩 FirstAidBox
-
-🔴 FireAlarm
-
-⚡ SafetySwitchPanel
-
-☎️ EmergencyPhone
-
-🔥 FireExtinguisher
-
-🛠️ Technical Workflow
-1️⃣ Environment Setup
-from google.colab import drive
+  <h3>1️⃣ Environment Setup</h3>
+  <pre><code>from google.colab import drive
 drive.mount('/content/drive')
 
 %cd /content/drive/My Drive/Ms_hack
@@ -40,119 +62,120 @@ drive.mount('/content/drive')
 !unzip Hackathon2_scripts.zip
 !unzip Hackathon2_test1.zip
 !unzip hackathon2_train_1.zip
+</code></pre>
 
-2️⃣ Dependency Installation
-
-We ensured a stable training environment using condacolab:
-
-!pip install -q condacolab
+  <h3>2️⃣ Dependency Installation</h3>
+  <pre><code>!pip install -q condacolab
 import condacolab
 condacolab.install()
 
 !mamba install ultralytics opencv-contrib-python streamlit -y
+</code></pre>
 
-3️⃣ Model Training (YOLOv8)
+  <h3>3️⃣ Model Training (YOLOv8)</h3>
+  <ul>
+    <li><strong>Base model:</strong> yolov8s.pt</li>
+    <li><strong>Hyperparameters:</strong>
+      <ul>
+        <li>Epochs = 100</li>
+        <li>Mosaic = 1.0</li>
+        <li>Patience = 100</li>
+      </ul>
+    </li>
+  </ul>
+  <pre><code>python train.py --model yolov8s.pt --epochs 100 --img 640
+</code></pre>
 
-Base model: yolov8s.pt
+  <h3>4️⃣ Performance Monitoring</h3>
+  <ul>
+    <li>📈 mAP@0.5 (Mean Average Precision)</li>
+    <li>📉 Loss curves (Box, Class, DFL)</li>
+    <li>🔄 Precision, Recall, and F1-score trends</li>
+  </ul>
 
-Hyperparameters:
+  <h3>5️⃣ Streamlit Application</h3>
+  <p>
+    We built an <strong>interactive Streamlit app</strong> for real-time safety object detection.  
+    Users can upload images and instantly see detected safety objects.
+  </p>
+  <p>
+    🌐 <strong>Deployment:</strong> 
+    <a href="https://dualityai-spacestationdetection.streamlit.app/" target="_blank">
+      Streamlit App
+    </a>
+  </p>
 
-Epochs = 100
+  <h4>▶️ Run Locally</h4>
+  <ol>
+    <li>
+      Clone the repo:
+      <pre><code>git clone https://github.com/&lt;your-repo&gt;/dualityai-safety-detection.git
+cd dualityai-safety-detection</code></pre>
+    </li>
+    <li>
+      Install dependencies:
+      <pre><code>pip install -r requirements.txt</code></pre>
+    </li>
+    <li>
+      Run the app:
+      <pre><code>streamlit run app.py</code></pre>
+    </li>
+    <li>Open in browser: <code>http://localhost:8501</code></li>
+  </ol>
 
-Mosaic = 1.0
+  <hr>
 
-Patience = 100
+  <h2>📊 Results</h2>
+  <ul>
+    <li><strong>mAP@0.5:</strong> 0.993 (synthetic validation set)</li>
+    <li><strong>Precision & Recall:</strong> Very high</li>
+    <li><strong>Note:</strong> Real-world generalization requires further adaptation</li>
+  </ul>
 
-python train.py --model yolov8s.pt --epochs 100 --img 640
+  <hr>
 
-4️⃣ Performance Monitoring
+  <h2>📦 Deliverables</h2>
+  <ul>
+    <li>✅ YOLOv8 trained weights (best.pt)</li>
+    <li>✅ Training & inference scripts (train.py, predict.py)</li>
+    <li>✅ Streamlit Web App (app.py) + deployment</li>
+    <li>✅ Performance Report (PDF/DOCX)</li>
+    <li>✅ README with setup instructions</li>
+    <li>⭐ Falcon-based retraining pipeline proposal</li>
+  </ul>
 
-We monitored:
+  <hr>
 
-mAP@0.5 (Mean Average Precision)
+  <h2>🏆 Judging Criteria Alignment</h2>
+  <ul>
+    <li>🎯 Model Performance (mAP@0.5): 80 pts</li>
+    <li>📖 Report clarity & reproducibility: 20 pts</li>
+    <li>🎁 Bonus (App + Falcon Use-case): Extra credit</li>
+  </ul>
 
-Loss curves (Box, Class, DFL)
+  <hr>
 
-Precision, Recall, F1 trends
+  <h2>📌 Future Improvements</h2>
+  <ul>
+    <li>🌍 Domain adaptation for real-world deployment</li>
+    <li>🖼️ Fine-tuning with real images</li>
+    <li>📡 Multi-modal monitoring (Vision + IoT sensors)</li>
+    <li>🔁 Continuous retraining pipeline using Falcon digital twin</li>
+  </ul>
 
-5️⃣ Streamlit App
+  <hr>
 
-We developed an interactive Streamlit app for real-time safety object detection.
+  <h2>🙌 Contributors</h2>
+  <ul>
+    <li>MD Waseem Ahmed</li>
+    <li>Vantala Saisree</li>
+    <li>MD Rukhnuddin</li>
+    <li>MD Faizan</li>
+    <li>Mujihad Ahmed</li>
+    <li>T Sai Nikhil</li>
+  </ul>
 
-🔗 Live Deployment: Streamlit App
+  <hr>
 
-▶️ Run Locally
-
-Clone the repo:
-
-git clone https://github.com/<your-repo>/dualityai-safety-detection.git
-cd dualityai-safety-detection
-
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-
-Start the app:
-
-streamlit run app.py
-
-
-Open browser → http://localhost:8501
-
-📊 Results
-
-mAP@0.5: 0.993 (synthetic validation set)
-
-Precision & Recall: Very high, confirming robust detection
-
-⚠️ Note: Performance on real-world images may differ → domain adaptation required
-
-📦 Deliverables
-
-✅ YOLOv8 trained weights (best.pt)
-
-✅ Training & inference scripts (train.py, predict.py)
-
-✅ Streamlit Web App (app.py) + deployment
-
-✅ Performance Report (PDF/DOCX)
-
-✅ README with setup instructions
-
-⭐ Bonus: Falcon-based retraining pipeline proposal
-
-🏆 Judging Criteria Alignment
-
-Model Performance (mAP@0.5): 80 pts
-
-Report Clarity & Reproducibility: 20 pts
-
-Bonus (App + Falcon Use-case): Extra credit
-
-📌 Future Improvements
-
-Domain adaptation for real-world generalization
-
-Fine-tuning with real images
-
-Extend to multi-modal monitoring (Vision + IoT sensors)
-
-Continuous digital twin retraining pipeline with Falcon
-
-🙌 Contributors
-
-MD Waseem Ahmed
-
-Vantala Saisree
-
-MD Rukhnuddin
-
-MD Faizan
-
-Mujihad Ahmed
-
-T Sai Nikhil
-
-🔥 This project shows how synthetic data + YOLOv8 + Streamlit can be harnessed for critical safety monitoring in space missions.
+  <p><strong>🔥 This project shows how synthetic data + YOLOv8 + Streamlit can be harnessed 
+    for mission-critical safety monitoring in space exploration.</strong></p>
