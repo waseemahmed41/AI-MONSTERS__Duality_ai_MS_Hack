@@ -10,7 +10,7 @@
     </a>
   </p>
 
-🎥 [Watch Demo Video](https://github.com/waseemahmed41/AI-MONSTERS__Duality_ai_MS_Hack/blob/main/DualityAi.mp4)
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://res.cloudinary.com/dwxxznitz/video/upload/v1758529308/DualityAi_js5woa.mp4)
 
 
   <hr>
