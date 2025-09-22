@@ -1,10 +1,10 @@
   <h1>🚀 Duality AI – Space Station Safety Object Detection Challenge</h1>
-  <p><strong>Live Demo:</strong> 🔗 
+  <p><strong>🟢 Live Demo:</strong> 🔗 
     <a href="https://dualityai-spacestationdetection.streamlit.app/" target="_blank">
       Streamlit App
     </a>
   </p>
-<p><strong>Dataset :</strong> 🔗 
+<p><strong>📂 Dataset :</strong> 🔗 
     <a href="https://falcon.duality.ai/secure/documentation/7-class-hackathon&utm_source=hackathon&utm_medium=instructions&utm_campaign=hyderabad" target="_blank">
       Falcon_Link
     </a>
