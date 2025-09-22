@@ -10,10 +10,13 @@
     </a>
   </p>
 
-<video width="600" controls>
-  <source src="Duality_AI.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <!-- Inline playback option -->
+  <video width="640" height="360" controls>
+    <source src="DualityAi.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
   <hr>
 
   <h2>📌 Overview</h2>
