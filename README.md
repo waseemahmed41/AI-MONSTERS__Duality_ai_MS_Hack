@@ -10,11 +10,7 @@
     </a>
   </p>
 
-  <!-- Inline playback option -->
-  <video width="640" height="360" controls>
-    <source src="DualityAi.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+🎥 [Watch Demo Video](https://github.com/waseemahmed41/AI-MONSTERS__Duality_ai_MS_Hack/blob/main/DualityAi.mp4)
 
 
   <hr>
