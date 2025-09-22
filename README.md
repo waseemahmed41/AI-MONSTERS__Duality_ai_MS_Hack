@@ -10,10 +10,14 @@
     </a>
   </p>
 <p><h4>🎥 Demo Video</h4>
- <a href="https://res.cloudinary.com/dwxxznitz/video/upload/v1758529308/DualityAi_js5woa.mp4" target="_blank">    click here  </a>
+ <a href="" target="_blank">    click here  </a>
 </p>
 
-
+<p><strong>🎥 Demo Video :</strong> 🔗 
+    <a href="https://res.cloudinary.com/dwxxznitz/video/upload/v1758529308/DualityAi_js5woa.mp4" target="_blank">
+      click here
+    </a>
+  </p>
   <hr>
 
   <h2>📌 Overview</h2>
