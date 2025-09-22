@@ -9,6 +9,11 @@
       Falcon_Link
     </a>
   </p>
+
+<video width="600" controls>
+  <source src="Duality_AI.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   <hr>
 
   <h2>📌 Overview</h2>
