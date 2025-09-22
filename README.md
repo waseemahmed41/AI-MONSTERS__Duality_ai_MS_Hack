@@ -9,7 +9,8 @@
       Falcon_Link
     </a>
   </p>
-## 🎥 Demo Video
+<h4>🎥 Demo Video</h4>
+ <a href="https://res.cloudinary.com/dwxxznitz/video/upload/v1758529308/DualityAi_js5woa.mp4" target="_blank">    </a>
 [![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://res.cloudinary.com/dwxxznitz/video/upload/v1758529308/DualityAi_js5woa.mp4)
 
 
